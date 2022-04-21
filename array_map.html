@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="demo"></p>
+  <p id="sort"></p>
+  <p id="loop"></p>
+  <script>
+    const arr=[2,5,8,9];
+    let txt=""
+    const res= arr.map(myfun);
+    function myfun(i){
+return i*2;
+    }
+    document.getElementById("demo").innerHTML=res;
+    arr.forEach(function arrsort(i){
+txt=txt+i+"<br>"
+    })
+    document.getElementById("sort").innerHTML=txt;
+
+txt="";
+    for(x in arr){
+      txt=txt+arr[x]+"<br>"
+
+    }
+    document.getElementById("loop").innerHTML= txt;
+  </script>
+</body>
+</html>
