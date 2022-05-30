@@ -15,9 +15,11 @@
   <script>
     let fruits = ["Orange", "Apple", "Banana"];
     let cost = [20, 30, 50];
-    let newFruit = fruits.map((v, i) => ({name: v, cost: cost[i]}));
+    let newFruit = fruits.map((v, i) => {
+      return {name: v, cost: cost[i]}
+    });
 
-    document.getElementById("map").innerText = JSON.stringify(newFruit, null,1);
+    document.getElementById("map").innerText = JSON.stringify(newFruit,null,1);
 
     let a=[20,40,2,3,4,5];
 
@@ -31,7 +33,7 @@
     )
     document.getElementById("filter").innerText = filter;
     
-    let sum= a.reduce((total,value)=>{return total+value});
+    let sum= a.reduce((total,value)=>{return total+value},100);
     document.getElementById("reduce").innerText = sum;
 
 

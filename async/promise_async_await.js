@@ -1,5 +1,5 @@
 const myPromise = new Promise(function (myResolve, myReject) {
-  var XMLHttpRequest = require("XMLHttpRequest").XMLHttpRequest;
+  var XMLHttpRequest = require("xhr2");
 
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "https://jsonplaceholdertypicode.com/todos/1", true);
@@ -24,7 +24,7 @@ const myPromise = new Promise(function (myResolve, myReject) {
 
 const f = async () => {
 
-  myPromise.then(function (value) {
+  await myPromise.then(function (value) {
     console.log(value);
   }, function (err) {
     console.log(err)

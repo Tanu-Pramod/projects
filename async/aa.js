@@ -2,8 +2,12 @@ function myDisplayer(some) {
   console.log(some);
 }
 
+var XMLHttpRequest = require('xhr2');
+ 
+
 const getFile = () => {
-  let req = new XMLHttpRequest();  req.open('GET',"https://api.sampleapis.com/beers/ale");
+  let req = new XMLHttpRequest();
+  req.open('GET',"http://localhost:3000/list");
   req.onload = function() {
     if (req.status == 200) {
       return this.responseText;
